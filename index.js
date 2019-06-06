@@ -2,11 +2,14 @@ var $listElement = document.querySelector('#app ul');
 var $inputElement = document.querySelector('#app input');
 var $btnElement = document.querySelector('#app button');
 
-var todos = [
-    'Estudar Java',
-    'Aprender Java Script',
-    'Fazer Café'
-];
+var todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+//var todos = [
+ //   'Estudar Java',
+ //   'Aprender Java Script',
+ //   'Fazer Café'
+//];
+
 
 
 function renderTodos() {
